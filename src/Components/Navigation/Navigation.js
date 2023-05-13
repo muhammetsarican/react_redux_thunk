@@ -13,6 +13,7 @@ import {
   DropdownItem,
   NavbarText,
 } from 'reactstrap';
+import CartSummary from '../Cart/CartSummary';
 
 function Navigation(args) {
   const [isOpen, setIsOpen] = useState(false);
@@ -23,6 +24,7 @@ function Navigation(args) {
     <div>
       <Navbar {...args}>
         <NavbarBrand href="/">reactstrap</NavbarBrand>
+        <CartSummary/>
         <NavbarToggler onClick={toggle} />
         <Collapse isOpen={isOpen} navbar>
           <Nav className="me-auto" navbar>
