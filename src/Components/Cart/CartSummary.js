@@ -13,8 +13,7 @@ import {
     DropdownMenu,
     DropdownItem,
     Row,
-    Badge,
-    Button
+    Badge
 } from 'reactstrap';
 
 class CartSummary extends Component {

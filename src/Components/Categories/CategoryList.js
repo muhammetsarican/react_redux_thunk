@@ -4,7 +4,6 @@ import { ListGroup, ListGroupItem, Row } from 'reactstrap'
 import { bindActionCreators } from 'redux'
 import * as categoryActions from "../../Redux/Actions/categoryActions"
 import * as productActions from "../../Redux/Actions/productActions"
-import categoryListReducer from '../../Redux/Reducers/categoryListReducer'
 
 class CategoryList extends Component {
   componentDidMount() {

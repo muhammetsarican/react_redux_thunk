@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux';
 import * as cartActions from '../../Redux/Actions/cartActions'
 import { bindActionCreators } from 'redux';
-import { Button, Table, Badge } from 'reactstrap';
+import { Table, Badge } from 'reactstrap';
 import alertify from 'alertifyjs';
 
 class CartDetail extends Component {
