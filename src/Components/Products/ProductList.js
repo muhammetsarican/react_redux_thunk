@@ -5,6 +5,7 @@ import * as productActions from "../../Redux/Actions/productActions";
 import { bindActionCreators } from 'redux'; 
 import * as cartAction from "../../Redux/Actions/cartActions"
 import alertify from "alertifyjs"
+import { Link } from 'react-router-dom/cjs/react-router-dom.min';
 
 class ProductList extends Component {
   componentDidMount(){
@@ -33,7 +34,7 @@ class ProductList extends Component {
             {this.props.products.map(product=>(
               <tr key={product.id}>
               <td>{product.id}</td>
-              <td>{product.productName}</td>
+              <td><Link to={"saveproduct/"+product.id}>{product.productName}</Link></td>
               <td>{product.quantityPerUnit}</td>
               <td>{product.unitPrice}</td>
               <td>{product.unitsInStock}</td>

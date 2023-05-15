@@ -12,8 +12,8 @@ export function updateProductsSuccess(products) {
     return { type: actions.UPDATEPRODUCTSSUCCESS, payload: products }
 }
 
-export function saveProductApi(product) {
-    return fetch("http://localhost:3000/products/" + `${product.id || ""}`, {
+export async function saveProductApi(product) {
+    return await fetch("http://localhost:3000/products/" + `${product.id || ""}`, {
         method: product.id ? "PUT" : "POST",
         headers: { "content-type": "application/json" },
         body: JSON.stringfy(product)
@@ -21,9 +21,9 @@ export function saveProductApi(product) {
         .then(handleResponse)
         .catch(handleError)
 }
-export function saveProduct(product) {
-    return function (dispatch) {
-        return saveProductApi(product)
+export async function saveProduct(product) {
+    return async function (dispatch) {
+        return await saveProductApi(product)
             .then(savedProduct => {
                 product.id
                     ? dispatch(updateProductsSuccess(saveProduct))
